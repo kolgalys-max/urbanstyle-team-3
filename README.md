@@ -8,7 +8,7 @@
 | Dmitri Postolaki | B: Supabase Seadistaja | Windows |
 | Robi Tikas| C: NotebookLM Seadistaja | Windows |
 | Germo Matt | D: Team Charter Koostaja | Windows |
-| Paul Vossotski | E: Portfoolio Struktuur + Dokumentatsioon | Windows |
+| Paul Vossotski | E: Portfoolio Struktuur + Dokumentatsioon | Mac |
 
 ## Meie eesmärk
 
