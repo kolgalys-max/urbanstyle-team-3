@@ -6,8 +6,8 @@
 |------|----------------|----|
 | Liis Kolga | A: GitHub Repo Seadistaja | Windows |
 | Dmitri Postolaki | B: Supabase Seadistaja | Windows |
-| Robi | C: NotebookLM Seadistaja | Windows |
-| Germo | D: Team Charter Koostaja | Windows |
+| Robi Tikas| C: NotebookLM Seadistaja | Windows |
+| Germo Matt | D: Team Charter Koostaja | Windows |
 | Paul Vossotski | E: Portfoolio Struktuur + Dokumentatsioon | Windows |
 
 ## Meie eesmärk
