@@ -56,3 +56,14 @@ Germo Matt
 ## Meie eesmärk
 
 Luua ühine töökeskkond GitHubis, Supabase'is ja NotebookLM-is ning lahendada UrbanStyle andmeanalüüsi ülesandeid meeskonnana.
+
+## Projekti lingid
+
+GitHub:
+https://github.com/kolgalys-max/urbanstyle-team-3
+
+Supabase:
+https://supabase.com/dashboard/org/lxvvyfgyvsaggxifejdi
+
+NotebookLM:
+https://notebooklm.google.com/notebook/1587744e-cb84-42b5-a128-071543e00810
