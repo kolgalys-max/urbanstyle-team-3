@@ -54,7 +54,7 @@ Valmis:
 - Meeskonna kokkulepped kirja pandud
 - Rollid ja rotatsioon määratud
 
-GitHub:
+Team Charter: 
 https://github.com/kolgalys-max/urbanstyle-team-3/blob/main/charter.md
 
 Vastutaja:
@@ -75,5 +75,5 @@ https://supabase.com/dashboard/org/lxvvyfgyvsaggxifejdi
 NotebookLM:
 https://notebooklm.google.com/notebook/1587744e-cb84-42b5-a128-071543e00810
 
-GitHub:
+Team Charter: 
 https://github.com/kolgalys-max/urbanstyle-team-3/blob/main/charter.md
