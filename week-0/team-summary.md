@@ -48,7 +48,14 @@ Robi Tikas
 
 ## Team Charter
 
-Valmimisel
+Valmis:
+
+- Team Charter loodud
+- Meeskonna kokkulepped kirja pandud
+- Rollid ja rotatsioon määratud
+
+GitHub:
+https://github.com/kolgalys-max/urbanstyle-team-3/blob/main/charter.md
 
 Vastutaja:
 Germo Matt
