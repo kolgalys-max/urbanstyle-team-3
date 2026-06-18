@@ -60,6 +60,16 @@ Valmis:
 Vastutaja:
 Germo Matt
 
+## Dokumentatsioon
+
+Valmis:
+
+- Team Summary koostatud
+- Projekti lingid koondatud
+- Ühine väljund dokumenteeritud
+
+Vastutaja: Paul Vossotski
+
 ## Meie eesmärk
 
 Luua ühine töökeskkond GitHubis, Supabase'is ja NotebookLM-is ning lahendada UrbanStyle andmeanalüüsi ülesandeid meeskonnana.
