@@ -1,22 +1,56 @@
-# UrbanStyle Team 3 -- UrbanStyle.ltd Andmemeeskond
+# Week 1 – SQL Basics: UrbanStyle Data Landscape
 
-## Meeskonnaliikmed
+## Meeskond
+- Liis Kolga – Roll A: Sales
+- Dmitri Postolaki – Roll B: Customers
+- Robi Tikas – Roll C: Products
+- Paul Vossotski – Roll D: Sales Channels
+- Germo Matt – puudus
 
-| Nimi | Roll (Nädal 1) | OS |
-|------|----------------|----|
-| Liis Kolga | A: GitHub Repo Seadistaja | Windows |
-| Dmitri Postolaki | B: Supabase Seadistaja | Windows |
-| Robi Tikas| C: NotebookLM Seadistaja | Windows |
-| Germo Matt | D: Team Charter Koostaja | Windows |
-| Paul Vossotski | E: Portfoolio Struktuur + Dokumentatsioon | Mac |
+## Roll A – Sales
+Liis uuris `sales` tabelit.
 
-## Meie eesmärk
+Peamised tulemused:
+- Müügikirjeid kokku: 15 234
+- Suurim tehing: 2170.40 €
+- Väikseim tehing: -1405.32 €
+- Puuduv kliendi ID: 1487
 
-Luua UrbanStyle Team 3 ühine töökeskkond GitHubis, Supabase'is ja NotebookLM-is, et saaksime DACA programmi jooksul teha andmeanalüüsi ülesandeid meeskonnana.
+Järeldus:
+Müügiandmeid saab analüüsiks kasutada, kuid enne põhjalikumat analüüsi tuleks kontrollida negatiivseid tehinguid ja puuduvaid kliendiandmeid.
 
-## Tööriistad
+## Roll B – Customers
+Dmitri uuris `customers` tabelit.
 
-- GitHub repository: urbanstyle-team-3
-- Supabase projekt
-- NotebookLM notebook
-- Team Charter
+Peamised tulemused:
+- Klientide arv: [lisa number]
+- Linnad: [lisa linnad]
+- Puuduvad andmed: [lisa leid]
+
+## Roll C – Products
+Robi uuris `products` tabelit.
+
+Peamised tulemused:
+- Toodete arv: [lisa number]
+- Kategooriad: [lisa kategooriad]
+- Hinnavahemik: [lisa min ja max hind]
+
+## Roll D – Sales Channels
+Paul uuris müügikanaleid ja asukohti.
+
+Peamised tulemused:
+- Kanalid: online, pood
+- Pood: 10 030 tehingut
+- Online: 5 204 tehingut
+- Tallinn: 5704
+- Tartu: 2708
+- Pärnu: 1618
+
+## Suurim üllatus
+Andmestikus leidus negatiivseid müügisummasid ja puuduvaid kliendi ID-sid.
+
+## Soovitus Toomasele
+Enne edasist analüüsi tuleks kontrollida andmekvaliteeti: duplikaadid, negatiivsed tehingud ja puuduvad kliendiandmed.
+
+## Puuduvad andmed
+Puudub selgitus, kas negatiivsed müügid tähistavad tagastusi või andmevigu ning miks osadel müükidel puudub kliendi ID.
