@@ -72,6 +72,28 @@ Lisatakse pärast Robi töö valmimist.
 
 ---
 
-## Soovitus
+## Soovitused Toomasele
 
-Enne keerukamate analüüside tegemist tuleks kontrollida andmekvaliteeti, eelkõige puuduvaid kliendiandmeid, negatiivseid müügisummasid ning võimalikke duplikaate.
+Pärast UrbanStyle andmestiku uurimist soovitame enne põhjalikuma ärianalüüsi tegemist parandada andmete kvaliteeti.
+
+### 1. Kontrollida puuduvaid andmeid
+
+* 1487 müügikirjel puudub `customer_id`.
+* Customers tabelis puudub 380 kliendi e-posti aadress.
+
+### 2. Uurida negatiivseid müügisummasid
+
+Leidus negatiivseid `total_price` väärtusi. Tuleks selgitada, kas need tähistavad tagastusi, tühistatud oste või andmevigu.
+
+### 3. Kontrollida võimalikke duplikaate
+
+Customers tabelis on 3150 klienti, kuid ainult 2640 unikaalset e-posti aadressi. Tuleks uurida, kas tegemist on korduvate klientidega või andmekvaliteedi probleemiga.
+
+### 4. Dokumenteerida andmed
+
+Lisada andmestikule selgitused veergude, ärireeglite ja võimalike erandite kohta, et järgmised analüütikud mõistaksid andmete tähendust paremini.
+
+## Kokkuvõte
+
+Nädala 1 jooksul õppis meeskond kasutama SQL-i andmete uurimiseks ning analüüsis UrbanStyle müügi-, kliendi- ja tooteandmeid. Andmestik sobib edasiseks analüüsiks, kuid enne äriliste otsuste tegemist soovitame parandada andmete kvaliteeti ja dokumentatsiooni.
+
