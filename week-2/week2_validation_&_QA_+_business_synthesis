@@ -1,1 +1,21 @@
 
+Kontrollisin meeskonna töö "põhitervist" ja tegin ristkontrolli, et tagada andmete kooskõla enne juhatuse koosolekut. 
+
+
+Valdkond                Roll            Leid / Kontrollpunkt                        Staatus           Märkused 
+
+Andmemaht               A               Toorandmetes on 15 234 rida.                OK                Vastab oodatud impordimahule.
+Duplikaadid             A               Tuvastati 5 116 liigset rida.               PARANDATUD        Unikaalseid arveid on tegelikult 10 118.
+NULL väärtused          B               1 487 müügitehingul puudub customer_id.     OK                Need on märgistatud "Unknown Customer" rolli täitmisel. 
+Tooteandmed             C               Algses tabelis 362 toodet,                  OK                12 duplikaati.
+Äriloogika              D               Asukoha NULL väärtused veebimüükide puhul.  OK                Need pole vead, vaid tähistavad 'online' kanalit.
+
+
+Kokkuvõte:
+UrbanStyle’i müügiandmete analüüs kinnitab süsteemset andmekaost: ligi kolmandik (33,6%) müügitabeli ridadest on duplikaadid, mis tähendab, et senised käibeandmed on olnud oluliselt üle hinnatud
+Üllatavalt on e-pood juba praegu põhiline tulukanal (60% käibest), kuid just sealt pärinevad ka kriitilised lüngad – 1487 tehingut on ilma tuvastatud kliendita, mis takistab otseselt turunduse personaliseerimist ja lojaalsusprogrammi laiendamist
+Selle analüüsi põhjal peame muutma varude tellimise strateegiat, kuna 12 toodet tootevalikus on täielikud "vaimtooted", mida pole kordagi müüdud, raisates nii laopinda kui kapitali
+
+
+
+
