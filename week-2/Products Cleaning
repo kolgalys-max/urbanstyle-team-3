@@ -1,0 +1,38 @@
+# Week 2 – Products Cleaning
+
+## Eesmärk
+
+Kontrollida `products` tabeli andmekvaliteeti ning valmistada andmed ette edasiseks analüüsiks.
+
+## Tehtud tegevused
+
+- Loodi testtabel `products_test`.
+- Kontrolliti tabeli ridade arvu.
+- Leiti ja eemaldati duplikaatsed tooted.
+- Kontrolliti puuduvaid väärtusi.
+- Kontrolliti negatiivseid hindu.
+- Kontrolliti ebatavaliselt kõrgeid hindu.
+- Analüüsiti toodete jaotust kategooriate kaupa.
+
+## Tulemused
+
+- Algne ridade arv: **362**
+- Pärast duplikaatide eemaldamist: **350**
+- Eemaldatud duplikaate: **12**
+- Puuduvad väärtused: **0**
+- Negatiivseid hindu: **0**
+- Üle 1000 € hinnaga tooteid: **0**
+
+### Kategooriate jaotus
+
+| Kategooria | Toodete arv |
+|------------|------------:|
+| Aksessuaarid | 67 |
+| Jalanõud | 73 |
+| Laste riided | 70 |
+| Meeste riided | 82 |
+| Naiste riided | 70 |
+
+## Kokkuvõte
+
+Products tabel puhastati edukalt. Duplikaadid eemaldati ning puuduvad väärtused ja vigased hinnad puudusid. Pärast puhastamist sisaldab tabel 350 kvaliteetset kirjet, mis on valmis edasiseks analüüsiks.
