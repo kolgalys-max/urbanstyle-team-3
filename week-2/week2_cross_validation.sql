@@ -48,6 +48,25 @@ LEFT JOIN customers c ON s.customer_id = c.customer_id
 WHERE c.customer_id IS NULL;
 -- count 1487
 
+--Hinna-kooskõla kontroll — kas müügihind klapib tootehinnaga? 
+SELECT 
+    s.sale_id,
+    s.total_price,
+    p.retail_price AS tootehind,
+    s.quantity,
+    s.total_price - (p.retail_price * s.quantity) AS erinevus,
+    ROUND(
+        100.0 * (s.total_price - (p.retail_price * s.quantity)) 
+        / NULLIF(p.retail_price * s.quantity, 0), 
+    2) AS protsent_erinevus
+FROM sales s
+JOIN products p ON s.product_id = p.product_id
+WHERE ABS(s.total_price - (p.retail_price * s.quantity)) > 1
+ORDER BY ABS(s.total_price - (p.retail_price * s.quantity)) DESC
+LIMIT 20;
+-- vähemalt 20 müüki, kus hind ei klapi tootehinnaga
+
+
 -- Millistel tootel on suurimad hinnaerinevused?
 SELECT 
     p.product_name, 
