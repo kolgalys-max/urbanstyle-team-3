@@ -1,0 +1,26 @@
+## Eesmärk
+
+Kontrollida `customers` tabeli andmekvaliteeti ning valmistada andmed ette edasiseks analüüsiks.
+
+## Tehtud tegevused
+
+- Looodi testtabel `customers_test`.
+- Kontrolliti tabeli ridade arvu.
+- Analüüsiti duplikaatseid e-posti aadresse.
+- Kontrolliti puuduvaid väärtusi.
+- Ühtlustati linnade kirjapildid (`TRIM`, `LOWER`, `INITCAP`).
+- Kontrolliti andmete korrektsust pärast puhastamist.
+
+## Tulemused
+
+- Algne ridade arv: **3150**
+- Puuduv eesnimi: **0**
+- Puuduv perenimi: **0**
+- Puuduv e-post: **380**
+- Puuduv linn: **0**
+- Linnade kirjapildid ühtlustati.
+- Pärast puhastamist jäi andmestikku **12 erinevat linna**.
+
+## Kokkuvõte
+
+Customers tabel oli üldiselt heas kvaliteedis. Peamised tähelepanekud olid ebaühtlased linnade kirjapildid ja 380 puuduva e-posti aadressiga kirjet. Linnade kirjapildid ühtlustati ning andmed on valmis edasiseks analüüsiks.
