@@ -12,6 +12,8 @@ Roll D: Ristvalideerimine ja kvaliteedikontroll - Dmitri
 
 Roll E: Valideerimine & QA + ärisüntees         - Robi     
 
+
+
 Roll A: Müügiandmete puhastamine – Germo 
 
 Soovitus: mida peaks Toomas esimesena parandama? 
