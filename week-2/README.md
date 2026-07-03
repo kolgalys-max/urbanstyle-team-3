@@ -3,9 +3,13 @@ Nädal 2 - SQL Puhastamine
 Meeskond: 
 
 Roll A: Müügiandmete puhastamine                - Germo 
+
 Roll B: Kliendiandmete puhastamine              - Liis 
+
 Roll C: Tooteandmete puhastamine                - Liis     
+
 Roll D: Ristvalideerimine ja kvaliteedikontroll - Dmitri   
+
 Roll E: Valideerimine & QA + ärisüntees         - Robi     
 
 Roll A: Müügiandmete puhastamine – Germo 
