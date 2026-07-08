@@ -2,40 +2,34 @@
 
 **Autor:** Liis Kolga
 
-## Eesmärk
+## Kontekst
 
-Selle ülesande eesmärk oli analüüsida UrbanStyle müügikanaleid ning hinnata nende tulemuslikkust SQL päringute abil. Töö käigus kasutati tabelite ühendamiseks INNER JOIN lauseid ning võrreldi müügikanaleid klientide, linnade ja tootekategooriate lõikes.
+Minu ülesanne oli analüüsida UrbanStyle müügikanaleid SQL JOIN päringute abil. Kasutasin tabelite `sales`, `customers` ja `products` andmeid, et võrrelda müügikanalite tulemuslikkust.
 
-## Tehtud töö
+## Minu töö
 
-Ülesande käigus:
+Koostasin SQL päringud, millega:
+- tuvastasin kasutusel olevad müügikanalid;
+- võrdlesin müügikanaleid klientide arvu, ostude arvu ja kogumüügi järgi;
+- analüüsisin müüki linnade lõikes;
+- analüüsisin tootekategooriaid müügikanalite lõikes;
+- arvutasin müügi ühe kliendi kohta.
 
-- tuvastasin andmebaasis kasutatavad müügikanalid;
-- koostasin ülevaate müügikanalite klientide arvust, ostude arvust ja kogumüügist;
-- analüüsisin müüki linnade lõikes, ühendades tabelid `sales` ja `customers`;
-- analüüsisin tootekategooriaid müügikanalite lõikes, ühendades tabelid `sales`, `customers` ja `products`;
-- võrdlesin müügikanalite efektiivsust müügi põhjal ühe kliendi kohta.
+## Tulemused
 
-## Kasutatud SQL tehnikad
+Analüüs näitas, et UrbanStyle kasutab kahte müügikanalit: **pood** ja **online**.
 
-- SELECT
-- DISTINCT
-- INNER JOIN
-- GROUP BY
-- COUNT()
-- SUM()
-- AVG()
-- ROUND()
-- ORDER BY
+Füüsiline pood teenindas **2287 klienti**, kellelt tehti **6656 ostu**, kogumüügiga **2 847 955,50 €**. Veebikanalis oli **1730 klienti**, **3462 ostu** ning kogumüük **1 526 275,77 €**.
 
-## Peamised tähelepanekud
+Müük ühe kliendi kohta oli füüsilises poes **1245,28 €**, veebikanalis **882,24 €**, mis näitab, et füüsiline pood oli selle näitaja põhjal efektiivsem.
 
-Analüüsi tulemusena selgus, et füüsiline pood teenis suurema kogukäibe ning müük ühe kliendi kohta oli kõrgem kui veebimüügis. Tallinn oli mõlemas müügikanalis suurima käibega linn. Kolme tabeli ühendamine võimaldas võrrelda müügikanaleid klientide, linnade ja tootekategooriate lõikes ning anda terviklikuma ülevaate müügikanalite tulemuslikkusest.
+Linnade võrdluses oli suurima müügiga **Tallinn** nii veebi- kui ka poekanalis. Tootekategooriate lõikes moodustasid suurima käibe meeste riided, jalanõud ja naisteriided.
 
-## Failid
+## Järeldus
 
-- `week3_roll_d_muugikanalid.sql`
+Tulemuste põhjal on füüsiline pood UrbanStyle kõige tugevam müügikanal nii kogumüügi kui ka müügi ühe kliendi kohta. Analüüs aitab hinnata müügikanalite tulemuslikkust ning toetab turundus- ja müügiotsuste tegemist.
 
-## Kokkuvõte
+## Meeskonna ühine töö
 
-Roll D ülesande käigus õppisin kasutama SQL INNER JOIN päringuid mitme tabeli ühendamiseks ning rakendama SQL funktsioone andmete koondamiseks ja analüüsimiseks. Ülesanne aitas paremini mõista, kuidas andmeid siduda ning kasutada SQL-i äriliste küsimuste lahendamisel.
+UrbanStyle Team 3 GitHub:
+https://github.com/kolgalys-max/urbanstyle-team-3
