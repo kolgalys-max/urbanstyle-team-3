@@ -1,60 +1,41 @@
--- =====================================================
--- Week 3 – Roll D: Sales Channels
--- Autor: Liis Kolga
--- =====================================================
+# Week 3 – Roll D: Müügikanalite analüüs
 
--- 1. Müügikanalid
-SELECT DISTINCT channel
-FROM sales
-ORDER BY channel;
+**Autor:** Liis Kolga
 
--- 2. Müügikanalite ülevaade
-SELECT
-    channel AS müügikanal,
-    COUNT(DISTINCT customer_id) AS kliente,
-    COUNT(sale_id) AS oste,
-    SUM(total_price) AS kogumüük
-FROM sales
-GROUP BY channel
-ORDER BY kogumüük DESC;
+## Eesmärk
 
--- 3. Müük kanalite ja linnade lõikes
-SELECT
-    s.channel AS müügikanal,
-    c.city AS linn,
-    COUNT(DISTINCT c.customer_id) AS kliente,
-    SUM(s.total_price) AS kogumüük
-FROM sales s
-INNER JOIN customers c
-    ON s.customer_id = c.customer_id
-GROUP BY s.channel, c.city
-ORDER BY s.channel, kogumüük DESC;
+Selle ülesande eesmärk oli analüüsida UrbanStyle müügikanaleid ning hinnata nende tulemuslikkust SQL päringute abil. Töö käigus kasutati tabelite ühendamiseks INNER JOIN lauseid ning võrreldi müügikanaleid klientide, linnade ja tootekategooriate lõikes.
 
--- 4. Müük kanalite ja tootekategooriate lõikes
-SELECT
-    s.channel AS müügikanal,
-    p.category AS tootekategooria,
-    COUNT(DISTINCT c.customer_id) AS kliente,
-    COUNT(s.sale_id) AS oste,
-    SUM(s.total_price) AS kogumüük,
-    ROUND(AVG(s.total_price), 2) AS keskmine_ost
-FROM sales s
-INNER JOIN customers c
-    ON s.customer_id = c.customer_id
-INNER JOIN products p
-    ON s.product_id = p.product_id
-GROUP BY s.channel, p.category
-ORDER BY s.channel, kogumüük DESC;
+## Tehtud töö
 
--- 5. Müük kliendi kohta müügikanalite lõikes
-SELECT
-    s.channel AS müügikanal,
-    COUNT(DISTINCT s.customer_id) AS kliente,
-    SUM(s.total_price) AS kogumüük,
-    ROUND(
-        SUM(s.total_price) / COUNT(DISTINCT s.customer_id),
-        2
-    ) AS müük_per_klient
-FROM sales s
-GROUP BY s.channel
-ORDER BY müük_per_klient DESC;
+Ülesande käigus:
+
+- tuvastasin andmebaasis kasutatavad müügikanalid;
+- koostasin ülevaate müügikanalite klientide arvust, ostude arvust ja kogumüügist;
+- analüüsisin müüki linnade lõikes, ühendades tabelid `sales` ja `customers`;
+- analüüsisin tootekategooriaid müügikanalite lõikes, ühendades tabelid `sales`, `customers` ja `products`;
+- võrdlesin müügikanalite efektiivsust müügi põhjal ühe kliendi kohta.
+
+## Kasutatud SQL tehnikad
+
+- SELECT
+- DISTINCT
+- INNER JOIN
+- GROUP BY
+- COUNT()
+- SUM()
+- AVG()
+- ROUND()
+- ORDER BY
+
+## Peamised tähelepanekud
+
+Analüüsi tulemusena selgus, et füüsiline pood teenis suurema kogukäibe ning müük ühe kliendi kohta oli kõrgem kui veebimüügis. Tallinn oli mõlemas müügikanalis suurima käibega linn. Kolme tabeli ühendamine võimaldas võrrelda müügikanaleid klientide, linnade ja tootekategooriate lõikes ning anda terviklikuma ülevaate müügikanalite tulemuslikkusest.
+
+## Failid
+
+- `week3_roll_d_muugikanalid.sql`
+
+## Kokkuvõte
+
+Roll D ülesande käigus õppisin kasutama SQL INNER JOIN päringuid mitme tabeli ühendamiseks ning rakendama SQL funktsioone andmete koondamiseks ja analüüsimiseks. Ülesanne aitas paremini mõista, kuidas andmeid siduda ning kasutada SQL-i äriliste küsimuste lahendamisel.
