@@ -4,7 +4,7 @@ Meeskond:
 
 Roll A: Müügiandmete puhastamine                - Germo 
 
-Roll B: Kliendiandmete puhastamine              - Liis 
+Roll B: Kliendiandmete puhastamine              - Paul 
 
 Roll C: Tooteandmete puhastamine                - Liis     
 
