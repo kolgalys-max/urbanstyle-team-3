@@ -1,84 +1,100 @@
-# Week 3 - INNER JOIN , LEFT JOIN , RIGHT JOIN
+# Week 3 – INNER JOIN, LEFT JOIN, RIGHT JOIN
 
-Meeskond: 
+## Meeskond
 
-Roll A: Müük + Kliendid                         - Robi
+- **Roll A:** Müük + Kliendid – Robi
+- **Roll B:** Kliendid ilma ostudeta – Germo
+- **Roll C:** Tooted + Inventuur – Paul
+- **Roll D:** Müügikanalid + Kliendid – Liis
+- **Roll E:** Valideerimine & QA + ärisüntees – Dmitri
 
-Roll B: Kliendid ilma ostudeta                  - Germo
+---
 
-Roll C: Tooted + Inventuur                      - Paul  
+## Roll A: Müük + Kliendid – Robi
 
-Roll D: Müügikanalid + Kliendid                 - Liis 
+UrbanStyle'i parimad kliendid on peamiselt Tallinnast pärit ja kuuluvad lojaalsusprogrammi **Gold**-tasemele, mis kinnitab, et praegune preemiasüsteem töötab efektiivselt.
 
-Roll E: Valideerimine & QA + ärisüntees         - Dmitri
+Enim müüke ja suurim kogutulu pärineb Tallinna kauplusest ja sealselt kliendibaasilt, kuigi Tartu kliendid näitavad samuti tugevat potentsiaali.
 
----------
+Kõige kasumlikum segment on **Gold**-tase, kuhu kuuluvad ettevõtte kõige lojaalsemad ja suurema ostukorviga kliendid.
 
-Roll A: Müük + Kliendid  - Robi
+### Äriline soovitus
 
-UrbanStyle’i parimad kliendid on peamiselt Tallinnast pärit ja kuuluvad lojaalsusprogrammi Gold-tasemele, mis kinnitab, et meie praegune preemiasüsteem töötab efektiivselt
-. Enim müüke ja suurim kogutulu pärineb Tallinna kauplusest ja sealselt kliendibaasilt, kuigi Tartu kliendid näitavad samuti tugevat potentsiaali
-. Kõige kasumlikum segment on ootuspäraselt Gold-tase, kuhu on koondunud meie kõige lojaalsemad ja suurema ostukorviga kliendid
-. See analüüs annab meile selge aluse suunata järgmine kampaania just Tallinna piirkonna VIP-klientidele.
+Järgmine lojaalsuskampaania tasub suunata Tallinna Gold-klientidele.
 
+---
 
-Roll B: Kliendid ilma ostudeta - Germo
+## Roll B: Kliendid ilma ostudeta – Germo
 
-Kadunud klientide raport (SLAIDILE INFO)
+### Kadunud klientide raport
 
-Ostuta kliendid: 599 registreerunud kasutajat ei ole sooritanud veel ühtegi ostu.
+- **599** registreerunud klienti ei ole sooritanud ühtegi ostu.
+- Kõige rohkem passiivseid kliente asub:
+  - **Tallinnas – 231**
+  - **Tartus – 138**
+- Soovitus on käivitada sihitud e-posti kampaania, mis pakub uutele klientidele piiratud ajaga esmaostusoodustust.
 
-Kriitilised piirkonnad: Üle poole passiivsetest klientidest asub Tallinnas (231) ja Tartus (138).
+### Äriline järeldus
 
-Soovitus tagasivõitmiseks: Käivitada sihitud e-maili kampaania (fookusega suurlinnadele), mis pakub ostule suunamiseks piiratud kehtivusajaga esmaostusoodustust.
+Talvine registreerimiste kasv (november 2024 – veebruar 2025) tõi küll palju uusi kasutajaid, kuid suur osa neist ei jõudnud esimese ostuni. Registreerumisjärgset klienditeekonda tuleks optimeerida, et parandada konversiooni.
 
-Lisaanalüüsi äriline järeldus
-Talvine registreerimiste hüpe (nov 2024 – veebr 2025) tõi lehele peamiselt kampaaniaturiste; see näitab, et kuigi uute kontaktide hankimine (Lead Gen) on edukas, on registreerumisjärgne konversioon esmaostuks ebaefektiivne ja vajab optimeerimist.
+---
 
+## Roll C: Tooted + Inventuur – Paul
 
-Roll C: Tooted + Inventuur - Paul/Germo
+### 📊 Müügivedurid ja TOP-kategooriad
 
-📊 MÜÜGIVEDURID JA TOP KATEGOORIAD
--------------------------------------------------------------------------------------------
-• Peamised käibemootorid: JALANÕUD (774 k€) ja MEESTE RIIDED (750 k€).
-• Tegevus: Tagada nende kategooriate püsiv tarnekindlus ja hoida fookust turunduses.
+- **Jalanõud** – **774 k€**
+- **Meeste riided** – **750 k€**
 
+**Soovitus:** tagada nende toodete pidev laoseis ning hoida neid turunduse keskmes.
 
-📉 SURNUD VARUD JA LAO OPTIMEERIMINE
--------------------------------------------------------------------------------------------
-• Probleem: Tuvastatud 12 TOODET, mida pole kunagi müüdud (sale_id IS NULL).
-• Tegevus: Vabastada laopind – eemaldada tooted sortimendist või müüa allahindlusega.
+### 📉 Surnud varud
 
+Leiti **12 toodet**, mida pole kordagi müüdud.
 
-📦 KRIITILISED VARUD JA JUURDETELLIMINE
--------------------------------------------------------------------------------------------
-• Probleem: Osa tooteid on langenud alla reorder-punkti (staatus: "TELLI JUURDE").
-• Tegevus: Täiendada varusid koheselt, prioriseerides top-müügihitte:
-  - Õhuline sünteetiline sporditossud (35 müüki | 27,3 k€)
-  - Trendikas goretex oxfordid (32 müüki | 23,4 k€)
+**Soovitus:** eemaldada need sortimendist või realiseerida sooduskampaaniatega.
 
+### 📦 Kriitilised laoseisud
 
-Roll D: Müügikanalid + Kliendid - Liis 
+Mitu toodet on langenud alla tellimispunkti.
 
-Tulemused
+Prioriteetsed juurde tellitavad tooted:
 
-Analüüs näitas, et UrbanStyle kasutab kahte müügikanalit: **pood** ja **online**.
+- Õhulised sünteetilised sporditossud (**35 müüki | 27,3 k€**)
+- Trendikad Gore-Tex Oxfordid (**32 müüki | 23,4 k€**)
 
-Füüsiline pood teenindas **2287 klienti**, kellelt tehti **6656 ostu**, kogumüügiga **2 847 955,50 €**. Veebikanalis oli **1730 klienti**, **3462 ostu** ning kogumüük **1 526 275,77 €**.
+---
 
-Müük ühe kliendi kohta oli füüsilises poes **1245,28 €**, veebikanalis **882,24 €**, mis näitab, et füüsiline pood oli selle näitaja põhjal efektiivsem.
+## Roll D: Müügikanalid + Kliendid – Liis
 
-Linnade võrdluses oli suurima müügiga **Tallinn** nii veebi- kui ka poekanalis. Tootekategooriate lõikes moodustasid suurima käibe meeste riided, jalanõud ja naisteriided.
+### Tulemused
 
-## Järeldus
+Analüüs näitas, et UrbanStyle kasutab kahte müügikanalit:
 
-Tulemuste põhjal on füüsiline pood UrbanStyle kõige tugevam müügikanal nii kogumüügi kui ka müügi ühe kliendi kohta. Analüüs aitab hinnata müügikanalite tulemuslikkust ning toetab turundus- ja müügiotsuste tegemist.
+- **Pood**
+- **Online**
 
+| Müügikanal | Kliente | Kogumüük | Müük kliendi kohta |
+|------------|---------:|---------:|-------------------:|
+| **Pood** | **2278** | **1 902 430 €** | **835,13 €** |
+| **Online** | **1706** | **1 006 747 €** | **590,12 €** |
 
-Roll E: Valideerimine & QA + ärisüntees - Dmitri
+Analüüsi põhjal teenindas füüsiline pood rohkem kliente ning teenis suurema kogumüügi. Samuti oli keskmine müük ühe kliendi kohta kõrgem kui veebikanalis.
 
-Soovitatavad järgmised sammud:
+### Järeldus
 
-Käivitada 2-nädalane sihitud e-mail + SMS kampaania Tallinna ja Tartu Gold + ostuta klientidele (esmaostu soodustus).
-Tagada top-toodete (õhulised sporditossud, goretex oxfordid jne) laoseis.
-Optimeerida registreerumisjärgset konversiooni (talvine leadide hüpe ei muutu müügiks).
+SQL JOIN päringute abil ühendati müügi-, kliendi- ja tootetabelite andmed ning võrreldi UrbanStyle müügikanalite tulemuslikkust.
+
+Analüüsi põhjal oli füüsiline pood edukam nii klientide arvu, kogumüügi kui ka keskmise müügi poolest ühe kliendi kohta.
+
+---
+
+## Roll E: Valideerimine & QA + ärisüntees – Dmitri
+
+### Soovitatavad järgmised sammud
+
+- Käivitada kahe nädala pikkune sihitud e-posti ja SMS-i kampaania Tallinna ning Tartu Gold-klientidele ja ostuta klientidele.
+- Tagada enim müüdud toodete (õhulised sporditossud, Gore-Tex Oxfordid jne) pidev laoseis.
+- Parandada registreerumisjärgset klienditeekonda, et suurendada esmaostu konversiooni.
+- Jätkata müügikanalite ja kliendikäitumise regulaarset analüüsimist, et toetada andmepõhiseid äriotsuseid.
