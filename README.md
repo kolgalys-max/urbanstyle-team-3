@@ -2,13 +2,13 @@
 
 **DACA G3 – Andmeanalüütiku Karjäärikiirendi**
 
-Tere tulemast **UrbanStyle Team 3** GitHubi repositooriumisse!
+## Projekti ülevaade
 
-See repositoorium koondab meie meeskonna grupitööd, SQL-lahendused ja dokumentatsiooni, mis valmisid DACA Andmeanalüütiku Karjäärikiirendi programmi käigus. Iga nädal keskendus erinevale andmeanalüüsi teemale ning praktiliste SQL-oskuste arendamisele UrbanStyle andmestiku põhjal.
+UrbanStyle Team 3 on DACA G3 õppeprogrammi raames moodustatud meeskond, kelle ülesanne on lahendada praktilisi andmeanalüüsi juhtumeid UrbanStyle näidisandmestiku põhjal.
 
----
+Repositoorium koondab meeskonna töö käigus valminud SQL-lahendused, analüüsid ja dokumentatsiooni ning kajastab projekti arengut nädalate lõikes.
 
-## 👥 Meeskond
+## Meeskond
 
 - Liis Kolga
 - Dmitri Postolaki
@@ -16,27 +16,23 @@ See repositoorium koondab meie meeskonna grupitööd, SQL-lahendused ja dokument
 - Paul Vossotski
 - Germo Matt
 
----
+## Repositooriumi struktuur
 
-## 📂 Repositooriumi ülesehitus
-
-| Kaust | Teema |
-|-------|-------|
-| `week-0` | Projekti seadistamine |
+| Kaust | Sisu |
+|:------|:-----|
+| `week-0` | Projekti ettevalmistus |
 | `week-1` | SQL Basics |
 | `week-2` | SQL Data Cleaning |
 | `week-3` | SQL JOINs |
 | `week-4` | SQL Aggregation |
-| `week-5` | SQL Advanced Queries *(täiendamisel)* |
-| `week-6` | ... *(täiendamisel)* |
-| `week-7` | ... *(täiendamisel)* |
-| `week-8` | ... *(täiendamisel)* |
-| `week-9` | ... *(täiendamisel)* |
-| `week-10` | Lõppprojekt ja esitlus *(täiendamisel)* |
+| `week-5` | Täiendamisel |
+| `week-6` | Täiendamisel |
+| `week-7` | Täiendamisel |
+| `week-8` | Täiendamisel |
+| `week-9` | Täiendamisel |
+| `week-10` | Lõppprojekt |
 
----
-
-## 🛠️ Kasutatud tööriistad
+## Kasutatud tehnoloogiad
 
 - PostgreSQL (Supabase)
 - SQL
@@ -44,36 +40,10 @@ See repositoorium koondab meie meeskonna grupitööd, SQL-lahendused ja dokument
 - NotebookLM
 - Power BI
 
----
+## Projekti eesmärk
 
-## 🎯 Eesmärk
+Projekti eesmärk on rakendada andmeanalüüsi põhimõtteid praktiliste ärijuhtumite lahendamisel. Iga nädal keskendub erinevale analüüsiteemale ning selle käigus valmivad SQL-päringud, raportid ja dokumentatsioon, mis on talletatud käesolevas repositooriumis.
 
-Repositooriumi eesmärk on koondada kõik UrbanStyle Team 3 grupitööd ühte kohta ning dokumenteerida meeskonna õpiteekond DACA programmi jooksul.
+## Märkused
 
-Siit leiab:
-
-- SQL päringud ja lahendused;
-- nädalate kaupa valminud grupitööd;
-- analüüsiraportid;
-- README failid;
-- projektiga seotud dokumentatsiooni.
-
----
-
-## 📚 Õpiteemad
-
-Programmi jooksul käsitletakse muu hulgas järgmisi teemasid:
-
-- SQL Basics
-- SQL Data Cleaning
-- SQL JOINs
-- SQL Aggregation
-- Advanced SQL
-- Power BI
-- Andmete visualiseerimine
-- Ärianalüüs ja andmepõhine otsustamine
-
----
-
-**UrbanStyle Team 3**  
-*DACA G3 – Andmeanalüütiku Karjäärikiirendi*
+Kõik analüüsid põhinevad UrbanStyle õppeandmestikul ning on koostatud DACA Andmeanalüütiku Karjäärikiirendi õppetöö raames.
