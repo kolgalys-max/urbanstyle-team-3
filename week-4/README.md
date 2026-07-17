@@ -1,42 +1,104 @@
 # Week 4 – SQL Aggregation
 
-**Autor:** Liis Kolga
+## UrbanStyle Team 3
 
-## Kontekst
+### Meeskond
 
-Minu roll oli Week 4 grupitöös vastutada valideerimise, kvaliteedikontrolli ja ärisünteesi eest. Kontrollisin meeskonnaliikmete SQL agregatsioonianalüüside korrektsust ning hindasin, kas analüüside tulemused olid omavahel kooskõlas.
+- Liis Kolga
+- Dmitri Postolaki
+- Robi Tikas
+- Paul Vossotski
+- Germo Matt
 
-## Minu töö
+---
 
-Valideerimise käigus:
+# Projekti eesmärk
 
-- kontrollisin Roll A müügi koondandmete analüüsi;
-- kontrollisin Roll B kliendigruppide analüüsi;
-- kontrollisin Roll C inventuuri ja laoseisu analüüsi;
-- kontrollisin Roll D turunduskanalite analüüsi;
-- koostasin meeskonna tulemuste põhjal ristkontrolli ja ühise ärisünteesi.
+Week 4 eesmärk oli kasutada SQL agregatsioonifunktsioone ettevõtte müügi-, kliendi-, inventuuri- ja turundusandmete analüüsimiseks ning koostada juhtkonnale ärilisi järeldusi toetavad raportid.
 
-## Tulemused
+---
 
-Valideerimise käigus olulisi vastuolusid ei tuvastatud ning analüüsid moodustasid tervikliku ülevaate UrbanStyle müügi-, kliendi-, inventuuri- ja turundusandmetest.
+# Meeskonna töö
+
+Week 4 jooksul valmisid järgmised analüüsid:
+
+- müügi koondandmete analüüs;
+- kliendigruppide analüüs;
+- inventuuri ja laoseisu analüüs;
+- turunduskanalite ROI analüüs;
+- valideerimine ja ärisüntees.
+
+Kõik analüüsid koostati PostgreSQL keskkonnas SQL agregatsioonifunktsioonide abil.
+
+---
+
+# Peamised tulemused
+
+## Müügianalüüs
+
+Analüüs näitas, et 2024. aasta oli ettevõtte jaoks tugeva kasvuga aasta.
+
+- Tellimuste arv kasvas aasta jooksul 312-lt 550-ni.
+- Parim kuu oli detsember, mille käive ulatus 170 623 euroni.
+- Kõige suurema käibe tõid meeste riided, jalanõud ja naisteriided. :contentReference[oaicite:4]{index=4}
+
+---
+
+## Kliendianalüüs
+
+Kliendid jaotati erinevatesse segmentidesse.
 
 Peamised järeldused:
 
-- 2024. aasta oli ettevõtte jaoks tugeva müügikasvuga periood;
-- suurima käibe tõid meeste riided, jalanõud ja naisteriided;
-- kõige tulemuslikumaks turunduskanaliks osutus Google Organic;
-- Gold-taseme VIP-kliendid moodustasid ettevõtte kõige väärtuslikuma kliendisegmendi.
+- ettevõttel on 245 Gold-taseme VIP-klienti;
+- VIP-kliendid on ettevõtte kõige väärtuslikum segment;
+- Regular-kliendid pakuvad suurimat kasvupotentsiaali;
+- uute klientide korduvostude suurendamine on järgmise perioodi oluline eesmärk. :contentReference[oaicite:5]{index=5}
 
-## Järeldus
+---
 
-Valideerimine kinnitas, et meeskonnaliikmete analüüsid olid omavahel kooskõlas ning valmis esitamiseks. Koostatud ärisüntees koondas peamised järeldused ja soovitused juhtkonnale.
+## Inventuuri analüüs
 
-## AI kasutamine
+Inventuuri analüüs kinnitas, et enim müüdud toodete kategooriad olid kooskõlas laoseisu andmetega ning võimaldas hinnata toodete saadavust müügimahtude suhtes.
 
-Kasutasin ChatGPT-d valideerimisraporti struktureerimiseks, keeleliseks toimetamiseks ning README vormistamisel. Kõik järeldused põhinevad meeskonnaliikmete SQL-analüüside tulemustel ja koostatud raportitel.
+---
 
-## Meeskonna ühine töö
+## Turundusanalüüs
 
-UrbanStyle Team 3 GitHub:
+Turunduskanalite võrdlus näitas selgeid erinevusi kanalite tulemuslikkuses.
 
-https://github.com/kolgalys-max/urbanstyle-team-3
+Peamised tulemused:
+
+- Google Organic tõi suurima müügikäibe;
+- Facebook oli müügikäibelt teine kanal;
+- e-mailiturundus oli kõige efektiivsem ühe kliendi kohta;
+- Instagram andis tugeva müügimahu;
+- Direct-kanal tõi palju tellimusi, kuid väiksema käibe kliendi kohta. :contentReference[oaicite:6]{index=6}
+
+---
+
+# Ärilised järeldused
+
+Meeskonna analüüside põhjal selgus, et:
+
+- ettevõtte müük kasvas kogu 2024. aasta jooksul;
+- Gold-taseme VIP-kliendid moodustavad kõige väärtuslikuma kliendisegmendi;
+- Google Organic on kõige tulemuslikum turunduskanal;
+- enim müüdud toodete piisav laoseis on ettevõtte jaoks oluline;
+- Regular-klientide arendamine VIP-segmenti pakub suurimat kasvuvõimalust. 
+
+---
+
+# Kokkuvõte
+
+Week 4 analüüsid andsid tervikliku ülevaate UrbanStyle müügitulemustest, kliendikäitumisest, inventuuri seisust ja turunduskanalite tulemuslikkusest. Valideerimise käigus olulisi vastuolusid ei tuvastatud ning tulemused olid valmis esitamiseks juhtkonnale. :contentReference[oaicite:8]{index=8}
+
+---
+
+# Kasutatud tehnoloogiad
+
+- PostgreSQL
+- SQL
+- Supabase
+- GitHub
+- NotebookLM
