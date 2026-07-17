@@ -30,7 +30,7 @@ Analüüsi eesmärk oli hinnata ettevõtte müügimahtu, kuiseid trende ja enim 
 
 ### Peamised tulemused
 
-- 2024. aasta näitas tugevat kasvutrendi.
+- 2024 aasta näitas tugevat kasvutrendi.
 - Tellimuste arv kasvas 312-lt jaanuaris 550-ni detsembris.
 - Käive suurenes 85 619 eurolt 170 623 euroni.
 - Parim kuu oli detsember.
@@ -105,7 +105,7 @@ Valideerimise eesmärk oli kontrollida kõigi meeskonnaliikmete analüüside kor
 
 # Meeskonna peamised järeldused
 
-- 2024. aasta oli ettevõtte jaoks tugeva kasvuga aasta.
+- 2024 aasta oli ettevõtte jaoks tugeva kasvuga aasta.
 - Detsember oli parim müügikuu.
 - Meeste riided, jalanõud ja naisteriided tõid suurima käibe.
 - Google Organic oli kõige tugevam turunduskanal.
