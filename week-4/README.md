@@ -5,20 +5,20 @@
 ### Meeskond
 
 | Roll | Liige | Vastutus |
-|------|--------|-----------|
+|------|--------|-------------------------------|
 | Roll A | Dmitri Postolaki | Müügi koondandmete analüüs |
 | Roll B | Robi Tikas | Kliendigruppide analüüs |
-| Roll C | Germo Matt | Inventuuri ja laoseisu analüüs |
-| Roll D | Paul Vossotski | Turunduskanalite ROI analüüs |
-| Roll E | Liis Kolga | Valideerimine, kvaliteedikontroll ja ärisüntees |
+| Roll C | Germo Matt | Inventuuri analüüs |
+| Roll D | Paul Vossotski | Turunduskampaaniate ROI |
+| Roll E | Liis Kolga | Valideerimine ja ärisüntees |
 
 ---
 
 # Projekti eesmärk
 
-Week 4 eesmärk oli kasutada SQL agregatsioonifunktsioone ettevõtte müügi-, kliendi-, inventuuri- ja turundusandmete analüüsimiseks ning koostada nende põhjal juhtkonnale ärilisi järeldusi.
+Week 4 eesmärk oli õppida kasutama SQL agregatsioonifunktsioone, et analüüsida UrbanStyle müügi-, kliendi-, inventuuri- ja turundusandmeid ning teha nende põhjal ärilisi järeldusi.
 
-Kõik analüüsid viidi läbi PostgreSQL keskkonnas UrbanStyle andmebaasi põhjal.
+Analüüsid koostati PostgreSQL andmebaasis kasutades funktsioone nagu `COUNT()`, `SUM()`, `AVG()`, `GROUP BY`, `HAVING`, CTE-d ja aknafunktsioonid.
 
 ---
 
@@ -26,14 +26,18 @@ Kõik analüüsid viidi läbi PostgreSQL keskkonnas UrbanStyle andmebaasi põhja
 
 **Vastutaja:** Dmitri Postolaki
 
-Analüüsi eesmärk oli hinnata 2024. aasta müügitulemusi ning leida peamised müügitrendid.
+Analüüsi eesmärk oli hinnata ettevõtte müügimahtu, kuiseid trende ja enim müüdud tootekategooriaid.
 
-Peamised tulemused:
+### Peamised tulemused
 
-- tellimuste arv kasvas aasta jooksul 312-lt 550-ni;
-- parim kuu oli detsember;
-- suurima käibe tõid meeste riided, jalanõud ja naisteriided;
-- 2024. aasta näitas ettevõtte jaoks tugevat müügikasvu.
+- 2024. aasta näitas tugevat kasvutrendi.
+- Tellimuste arv kasvas 312-lt jaanuaris 550-ni detsembris.
+- Käive suurenes 85 619 eurolt 170 623 euroni.
+- Parim kuu oli detsember.
+- Kõige suurema käibega kategooriad olid:
+  - meeste riided
+  - jalanõud
+  - naiste riided
 
 ---
 
@@ -41,44 +45,46 @@ Peamised tulemused:
 
 **Vastutaja:** Robi Tikas
 
-Analüüsi eesmärk oli jagada kliendid segmentidesse ning hinnata nende ärilist väärtust.
+Analüüsi eesmärk oli jagada kliendid segmentidesse ning hinnata nende väärtust ettevõtte jaoks.
 
-Peamised tulemused:
+### Peamised tulemused
 
-- ettevõttel on 245 Gold-taseme VIP-klienti;
-- VIP-kliendid moodustavad kõige väärtuslikuma kliendisegmendi;
-- Regular-segment pakub suurimat kasvupotentsiaali;
-- uute klientide korduvostude suurendamine on järgmise perioodi oluline eesmärk.
+- Ettevõttel on 245 Gold-taseme VIP-klienti.
+- VIP-kliendid on peamiselt Tallinna kliendid ning moodustavad ettevõtte kõige väärtuslikuma segmendi.
+- Regular-kliendid Tartus ja Pärnus pakuvad suurimat kasvupotentsiaali.
+- Uute klientide korduvostude suurendamine on järgmise perioodi oluline eesmärk.
 
 ---
 
-# Roll C – Inventuuri ja laoseisu analüüs
+# Roll C – Inventuuri analüüs
 
 **Vastutaja:** Germo Matt
 
-Analüüsi eesmärk oli hinnata laoseisu ning võrrelda seda müügitulemustega.
+Analüüsi eesmärk oli hinnata laoseisu ning võrrelda inventuuri müügitulemustega.
 
-Peamised tulemused:
+### Peamised tulemused
 
-- inventuuri analüüs võimaldas hinnata toodete saadavust;
-- enim müüdud toodete kategooriad olid kooskõlas müügianalüüsi tulemustega;
-- laoseisu jälgimine aitab vähendada võimalikke laopuudujääke.
+- Inventuuri tulemused olid kooskõlas müügianalüüsiga.
+- Enim müüdud toodete kategooriad vastasid suurima käibega kategooriatele.
+- Laoseisu jälgimine aitab vältida populaarsete toodete puudujääke.
 
 ---
 
-# Roll D – Turunduskanalite ROI analüüs
+# Roll D – Turunduskampaaniate ROI
 
 **Vastutaja:** Paul Vossotski
 
 Analüüsi eesmärk oli hinnata turunduskanalite tulemuslikkust.
 
-Peamised tulemused:
+### Peamised tulemused
 
-- Google Organic oli suurima käibega kanal;
-- Facebook saavutas müügikäibelt teise koha;
-- e-mailiturundus oli kõige efektiivsem kliendi kohta;
-- Instagram tõi tugeva müügimahu;
-- Direct-kanal andis palju tellimusi, kuid väiksema käibe kliendi kohta.
+| Kanal | Tulemus |
+|-------|----------|
+| Google Organic | suurim käive – ligikaudu 2,31 miljonit € |
+| Facebook | ligikaudu 1,78 miljonit € käivet |
+| Instagram | ligikaudu 1,31 miljonit € käivet |
+| Direct | ligikaudu 1,08 miljonit € käivet |
+| E-mailiturundus | kõige efektiivsem kanal kliendi kohta |
 
 ---
 
@@ -86,41 +92,35 @@ Peamised tulemused:
 
 **Vastutaja:** Liis Kolga
 
-Analüüsi eesmärk oli kontrollida meeskonnaliikmete tööde kvaliteeti ning koostada ühine äriline kokkuvõte.
+Valideerimise eesmärk oli kontrollida kõigi meeskonnaliikmete analüüside korrektsust ning koostada ühine äriline kokkuvõte.
 
-Valideerimise käigus:
+### Valideerimise tulemused
 
-- kontrolliti kõigi rollide analüüside korrektsust;
-- võrreldi tulemuste omavahelist kooskõla;
-- koostati ristkontroll;
-- koostati ühine ärisüntees.
-
-Valideerimise tulemus:
-
-- olulisi vastuolusid ei tuvastatud;
-- kõik analüüsid moodustasid tervikliku ülevaate ettevõtte tulemustest.
+- kontrolliti kõiki viit rolli;
+- olulisi vastuolusid ei leitud;
+- analüüsid olid omavahel kooskõlas;
+- tulemused olid valmis esitamiseks juhatusele.
 
 ---
 
 # Meeskonna peamised järeldused
 
-Week 4 analüüside põhjal selgus, et:
-
-- 2024. aasta oli ettevõtte jaoks tugeva kasvuga aasta;
-- detsember oli aasta edukaim müügikuu;
-- meeste riided, jalanõud ja naisteriided tõid suurima müügikäibe;
-- Gold-taseme VIP-kliendid olid ettevõtte kõige väärtuslikum kliendisegment;
-- Google Organic oli kõige tulemuslikum turunduskanal;
-- e-mailiturundus oli kõige efektiivsem kanal kliendi kohta;
-- inventuuri ja müügi tulemused olid omavahel kooskõlas.
+- 2024. aasta oli ettevõtte jaoks tugeva kasvuga aasta.
+- Detsember oli parim müügikuu.
+- Meeste riided, jalanõud ja naisteriided tõid suurima käibe.
+- Google Organic oli kõige tugevam turunduskanal.
+- E-mailiturundus oli kõige efektiivsem kanal ühe kliendi kohta.
+- Gold-taseme VIP-kliendid moodustavad ettevõtte kõige väärtuslikuma kliendisegmendi.
+- Inventuuri tulemused kinnitasid müügianalüüsi tulemusi.
+- Kõik meeskonnaliikmete analüüsid läbisid valideerimise.
 
 ---
 
 # Kokkuvõte
 
-Week 4 käigus valmisid müügi-, kliendi-, inventuuri- ja turundusanalüüsid ning nende põhjal koostati ühine valideerimine ja ärisüntees.
+Week 4 käigus valmis terviklik ülevaade UrbanStyle müügi-, kliendi-, inventuuri- ja turundusandmetest. SQL agregatsioonifunktsioonide abil leiti ettevõtte peamised müügitrendid, väärtuslikumad kliendisegmendid, tulemuslikumad turunduskanalid ning hinnati inventuuri vastavust müüginõudlusele.
 
-Meeskonna analüüsid andsid tervikliku ülevaate UrbanStyle ettevõtte 2024. aasta tulemustest ning pakkusid juhtkonnale andmetel põhinevaid järeldusi edasiste otsuste tegemiseks.
+Valideerimise tulemusena kinnitati, et kõik analüüsid olid omavahel kooskõlas ning moodustasid usaldusväärse aluse juhtkonnale soovituste esitamiseks.
 
 ---
 
@@ -131,3 +131,4 @@ Meeskonna analüüsid andsid tervikliku ülevaate UrbanStyle ettevõtte 2024. aa
 - Supabase
 - GitHub
 - NotebookLM
+- ChatGPT (dokumentatsiooni vormistamiseks)
