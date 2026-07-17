@@ -4,94 +4,123 @@
 
 ### Meeskond
 
-- Liis Kolga
-- Dmitri Postolaki
-- Robi Tikas
-- Paul Vossotski
-- Germo Matt
+| Roll | Liige | Vastutus |
+|------|--------|-----------|
+| Roll A | Dmitri Postolaki | Müügi koondandmete analüüs |
+| Roll B | Robi Tikas | Kliendigruppide analüüs |
+| Roll C | Germo Matt | Inventuuri ja laoseisu analüüs |
+| Roll D | Paul Vossotski | Turunduskanalite ROI analüüs |
+| Roll E | Liis Kolga | Valideerimine, kvaliteedikontroll ja ärisüntees |
 
 ---
 
 # Projekti eesmärk
 
-Week 4 eesmärk oli kasutada SQL agregatsioonifunktsioone ettevõtte müügi-, kliendi-, inventuuri- ja turundusandmete analüüsimiseks ning koostada juhtkonnale ärilisi järeldusi toetavad raportid.
+Week 4 eesmärk oli kasutada SQL agregatsioonifunktsioone ettevõtte müügi-, kliendi-, inventuuri- ja turundusandmete analüüsimiseks ning koostada nende põhjal juhtkonnale ärilisi järeldusi.
+
+Kõik analüüsid viidi läbi PostgreSQL keskkonnas UrbanStyle andmebaasi põhjal.
 
 ---
 
-# Meeskonna töö
+# Roll A – Müügi koondandmete analüüs
 
-Week 4 jooksul valmisid järgmised analüüsid:
+**Vastutaja:** Dmitri Postolaki
 
-- müügi koondandmete analüüs;
-- kliendigruppide analüüs;
-- inventuuri ja laoseisu analüüs;
-- turunduskanalite ROI analüüs;
-- valideerimine ja ärisüntees.
-
-Kõik analüüsid koostati PostgreSQL keskkonnas SQL agregatsioonifunktsioonide abil.
-
----
-
-# Peamised tulemused
-
-## Müügianalüüs
-
-Analüüs näitas, et 2024. aasta oli ettevõtte jaoks tugeva kasvuga aasta.
-
-- Tellimuste arv kasvas aasta jooksul 312-lt 550-ni.
-- Parim kuu oli detsember, mille käive ulatus 170 623 euroni.
-- Kõige suurema käibe tõid meeste riided, jalanõud ja naisteriided. :contentReference[oaicite:4]{index=4}
-
----
-
-## Kliendianalüüs
-
-Kliendid jaotati erinevatesse segmentidesse.
-
-Peamised järeldused:
-
-- ettevõttel on 245 Gold-taseme VIP-klienti;
-- VIP-kliendid on ettevõtte kõige väärtuslikum segment;
-- Regular-kliendid pakuvad suurimat kasvupotentsiaali;
-- uute klientide korduvostude suurendamine on järgmise perioodi oluline eesmärk. :contentReference[oaicite:5]{index=5}
-
----
-
-## Inventuuri analüüs
-
-Inventuuri analüüs kinnitas, et enim müüdud toodete kategooriad olid kooskõlas laoseisu andmetega ning võimaldas hinnata toodete saadavust müügimahtude suhtes.
-
----
-
-## Turundusanalüüs
-
-Turunduskanalite võrdlus näitas selgeid erinevusi kanalite tulemuslikkuses.
+Analüüsi eesmärk oli hinnata 2024. aasta müügitulemusi ning leida peamised müügitrendid.
 
 Peamised tulemused:
 
-- Google Organic tõi suurima müügikäibe;
-- Facebook oli müügikäibelt teine kanal;
-- e-mailiturundus oli kõige efektiivsem ühe kliendi kohta;
-- Instagram andis tugeva müügimahu;
-- Direct-kanal tõi palju tellimusi, kuid väiksema käibe kliendi kohta. :contentReference[oaicite:6]{index=6}
+- tellimuste arv kasvas aasta jooksul 312-lt 550-ni;
+- parim kuu oli detsember;
+- suurima käibe tõid meeste riided, jalanõud ja naisteriided;
+- 2024. aasta näitas ettevõtte jaoks tugevat müügikasvu.
 
 ---
 
-# Ärilised järeldused
+# Roll B – Kliendigruppide analüüs
 
-Meeskonna analüüside põhjal selgus, et:
+**Vastutaja:** Robi Tikas
 
-- ettevõtte müük kasvas kogu 2024. aasta jooksul;
-- Gold-taseme VIP-kliendid moodustavad kõige väärtuslikuma kliendisegmendi;
-- Google Organic on kõige tulemuslikum turunduskanal;
-- enim müüdud toodete piisav laoseis on ettevõtte jaoks oluline;
-- Regular-klientide arendamine VIP-segmenti pakub suurimat kasvuvõimalust. 
+Analüüsi eesmärk oli jagada kliendid segmentidesse ning hinnata nende ärilist väärtust.
+
+Peamised tulemused:
+
+- ettevõttel on 245 Gold-taseme VIP-klienti;
+- VIP-kliendid moodustavad kõige väärtuslikuma kliendisegmendi;
+- Regular-segment pakub suurimat kasvupotentsiaali;
+- uute klientide korduvostude suurendamine on järgmise perioodi oluline eesmärk.
+
+---
+
+# Roll C – Inventuuri ja laoseisu analüüs
+
+**Vastutaja:** Germo Matt
+
+Analüüsi eesmärk oli hinnata laoseisu ning võrrelda seda müügitulemustega.
+
+Peamised tulemused:
+
+- inventuuri analüüs võimaldas hinnata toodete saadavust;
+- enim müüdud toodete kategooriad olid kooskõlas müügianalüüsi tulemustega;
+- laoseisu jälgimine aitab vähendada võimalikke laopuudujääke.
+
+---
+
+# Roll D – Turunduskanalite ROI analüüs
+
+**Vastutaja:** Paul Vossotski
+
+Analüüsi eesmärk oli hinnata turunduskanalite tulemuslikkust.
+
+Peamised tulemused:
+
+- Google Organic oli suurima käibega kanal;
+- Facebook saavutas müügikäibelt teise koha;
+- e-mailiturundus oli kõige efektiivsem kliendi kohta;
+- Instagram tõi tugeva müügimahu;
+- Direct-kanal andis palju tellimusi, kuid väiksema käibe kliendi kohta.
+
+---
+
+# Roll E – Valideerimine ja ärisüntees
+
+**Vastutaja:** Liis Kolga
+
+Analüüsi eesmärk oli kontrollida meeskonnaliikmete tööde kvaliteeti ning koostada ühine äriline kokkuvõte.
+
+Valideerimise käigus:
+
+- kontrolliti kõigi rollide analüüside korrektsust;
+- võrreldi tulemuste omavahelist kooskõla;
+- koostati ristkontroll;
+- koostati ühine ärisüntees.
+
+Valideerimise tulemus:
+
+- olulisi vastuolusid ei tuvastatud;
+- kõik analüüsid moodustasid tervikliku ülevaate ettevõtte tulemustest.
+
+---
+
+# Meeskonna peamised järeldused
+
+Week 4 analüüside põhjal selgus, et:
+
+- 2024. aasta oli ettevõtte jaoks tugeva kasvuga aasta;
+- detsember oli aasta edukaim müügikuu;
+- meeste riided, jalanõud ja naisteriided tõid suurima müügikäibe;
+- Gold-taseme VIP-kliendid olid ettevõtte kõige väärtuslikum kliendisegment;
+- Google Organic oli kõige tulemuslikum turunduskanal;
+- e-mailiturundus oli kõige efektiivsem kanal kliendi kohta;
+- inventuuri ja müügi tulemused olid omavahel kooskõlas.
 
 ---
 
 # Kokkuvõte
 
-Week 4 analüüsid andsid tervikliku ülevaate UrbanStyle müügitulemustest, kliendikäitumisest, inventuuri seisust ja turunduskanalite tulemuslikkusest. Valideerimise käigus olulisi vastuolusid ei tuvastatud ning tulemused olid valmis esitamiseks juhtkonnale. :contentReference[oaicite:8]{index=8}
+Week 4 käigus valmisid müügi-, kliendi-, inventuuri- ja turundusanalüüsid ning nende põhjal koostati ühine valideerimine ja ärisüntees.
+
+Meeskonna analüüsid andsid tervikliku ülevaate UrbanStyle ettevõtte 2024. aasta tulemustest ning pakkusid juhtkonnale andmetel põhinevaid järeldusi edasiste otsuste tegemiseks.
 
 ---
 
