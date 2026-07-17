@@ -62,13 +62,19 @@ Analüüsi eesmärk oli jagada kliendid segmentidesse ning hinnata nende väärt
 
 Analüüsi eesmärk oli hinnata laoseisu ning võrrelda inventuuri müügitulemustega.
 
-### Peamised tulemused
+[1. TULEMUSED & NUMBRID]
+* Meeste riided: Suurim müügimaht (4121 tk).
+* Jalanõud: Kalleim (kesk. 214€) ja suurima käibega.
+* Laste riided: Suur tükimüük (3686 tk), aga odavaim (kesk. 85€).
 
-- Inventuuri tulemused olid kooskõlas müügianalüüsiga.
-- Enim müüdud toodete kategooriad vastasid suurima käibega kategooriatele.
-- Laoseisu jälgimine aitab vältida populaarsete toodete puudujääke.
+[2. PROBLEEMIKOHT]
+* Laste ja naiste osakonna hitid müüvad massiliselt, aga toovad vähe sisse.
+* Võrdlus: Jalanõude TOP toode = 23k€ vs Laste TOP toode = 4.4k€.
 
----
+[3. TEGEVUSPLAAN]
+* Tõsta odavate, aga populaarsete hitt-toodete hinda.
+* Loo komplektipakkumisi (bundle) koos kasumlike aksessuaaridega.
+* Suuna turundusfookus enim sissetoovatele kategooriatele (jalanõud, meeste).
 
 # Roll D – Turunduskampaaniate ROI
 
