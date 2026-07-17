@@ -78,15 +78,11 @@ Analüüsi eesmärk oli hinnata turunduskanalite tulemuslikkust.
 
 ### Peamised tulemused
 
-| Kanal | Tulemus |
-|-------|----------|
-| Google Organic | suurim käive – ligikaudu 2,31 miljonit € |
-| Facebook | ligikaudu 1,78 miljonit € käivet |
-| Instagram | ligikaudu 1,31 miljonit € käivet |
-| Direct | ligikaudu 1,08 miljonit € käivet |
-| E-mailiturundus | kõige efektiivsem kanal kliendi kohta |
-
----
+- **Google Organic** – suurima käibega turunduskanal (u 2,31 miljonit € ja 7 990 tellimust).
+- **Facebook** – teine suurim kanal (u 1,78 miljonit € käivet ja 6 206 tellimust).
+- **Instagram** – u 1,31 miljonit € käivet ja 4 597 tellimust.
+- **Direct** – u 1,08 miljonit € käivet ja 3 864 tellimust.
+- **E-mailiturundus** – kõige efektiivsem kanal kliendi kohta (keskmiselt u 1 090 € müügitulu kliendi kohta).
 
 # Roll E – Valideerimine ja ärisüntees
 
