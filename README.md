@@ -6,7 +6,7 @@
 
 UrbanStyle Team 3 on DACA G3 õppeprogrammi raames moodustatud meeskond, kelle ülesanne on lahendada praktilisi andmeanalüüsi juhtumeid UrbanStyle näidisandmestiku põhjal.
 
-Repositoorium koondab meeskonna töö käigus valminud SQL-lahendused, analüüsid ja dokumentatsiooni ning kajastab projekti arengut nädalate lõikes.
+Repositoorium koondab meeskonnatöö käigus valminud SQL-lahendused, analüüsid, Power BI aruanded ja dokumentatsiooni ning kajastab projekti arengut nädalate lõikes.
 
 ## Meeskond
 
@@ -19,14 +19,14 @@ Repositoorium koondab meeskonna töö käigus valminud SQL-lahendused, analüüs
 ## Repositooriumi struktuur
 
 | Kaust | Sisu |
-|:------|:-----|
+|---|---|
 | `week-0` | Projekti ettevalmistus |
 | `week-1` | SQL Basics |
 | `week-2` | SQL Data Cleaning |
 | `week-3` | SQL JOINs |
 | `week-4` | SQL Aggregation |
-| `week-5` | Täiendamisel |
-| `week-6` | Täiendamisel |
+| `week-5` | Visualiseerimise disain ja Power BI dashboard |
+| `week-6` | Power BI dashboard’id ja andmelood |
 | `week-7` | Täiendamisel |
 | `week-8` | Täiendamisel |
 | `week-9` | Täiendamisel |
@@ -34,7 +34,8 @@ Repositoorium koondab meeskonna töö käigus valminud SQL-lahendused, analüüs
 
 ## Kasutatud tehnoloogiad
 
-- PostgreSQL (Supabase)
+- PostgreSQL
+- Supabase
 - SQL
 - GitHub
 - NotebookLM
@@ -42,7 +43,9 @@ Repositoorium koondab meeskonna töö käigus valminud SQL-lahendused, analüüs
 
 ## Projekti eesmärk
 
-Projekti eesmärk on rakendada andmeanalüüsi põhimõtteid praktiliste ärijuhtumite lahendamisel. Iga nädal keskendub erinevale analüüsiteemale ning selle käigus valmivad SQL-päringud, raportid ja dokumentatsioon, mis on talletatud käesolevas repositooriumis.
+Projekti eesmärk on rakendada andmeanalüüsi põhimõtteid praktiliste ärijuhtumite lahendamisel.
+
+Iga nädal keskendub erinevale analüüsiteemale ning selle käigus valmivad SQL-päringud, analüüsid, visualiseeringud, dashboard’id ja dokumentatsioon, mis talletatakse käesolevas repositooriumis.
 
 ## Märkused
 
