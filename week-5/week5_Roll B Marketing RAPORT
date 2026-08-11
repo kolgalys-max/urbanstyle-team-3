@@ -1,0 +1,63 @@
+ROLL B: Marketing Dashboard
+
+ÜLESANNE: 
+
+Anna tahab näha, millised müügikanalid toovad         
+kõige rohkem kliente ja müüki. Loo marketing dashboard,         
+mis näitab kanalite efektiivsust ja kliendihankimise mustrit.
+
+
+--Hangi andmed SQL päring
+
+SELECT 
+    s.channel, COUNT(DISTINCT s.customer_id) 
+    AS        
+       kliendid, SUM(s.total_price) AS tulu                      
+     FROM sales s                                                
+     GROUP BY s.channel ORDER BY tulu DESC;  
+
+--Tulemus
+
+| channel | kliendid | tulu       |
+| ------- | -------- | ---------- |
+| pood    | 2278     | 1902430.30 |
+| online  | 1706     | 1006747.68 |
+
+
+" Anna, parim kanal on Pood , mis tõi 2278 klienti ja 1902430.30 EUR tulu. 
+  Soovitus keskenduda online / e-poele, tänapäeval hea e-pood toob potentsiaalselt rohkem tulu kui füüsiline pood."
+
+
+
+
+--Lisaks tegin 
+VIHJE: sales.channel väärtused võivad vajada standardiseerimist (nt suurtähed/väiketähed).
+Kontrolli DISTINCT väärtused enne! 
+
+SELECT 
+    channel, 
+    COUNT(*) as row_count
+FROM sales 
+GROUP BY channel 
+ORDER BY row_count DESC;
+
+ALTER TABLE sales 
+ADD COLUMN IF NOT EXISTS channel_clean TEXT;
+
+UPDATE sales 
+SET channel_clean = 
+    CASE 
+        WHEN LOWER(TRIM(channel)) = 'pood'   THEN 'Pood'
+        WHEN LOWER(TRIM(channel)) = 'online' THEN 'Online'
+        ELSE INITCAP(TRIM(channel))
+    END;
+
+    SELECT channel, channel_clean, COUNT(*) 
+FROM sales 
+GROUP BY channel, channel_clean 
+ORDER BY COUNT(*) DESC;
+
+| channel | channel_clean | count |
+| ------- | ------------- | ----- |
+| pood    | Pood          | 6656  |
+| online  | Online        | 3462  |

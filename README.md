@@ -1,10 +1,12 @@
 # UrbanStyle Team 3
 
-## DACA G3 – Andmeanalüütiku Karjäärikiirendi
+**DACA G3 – Andmeanalüütiku Karjäärikiirendi**
 
-Tere tulemast UrbanStyle Team 3 GitHubi repositooriumisse.
+## Projekti ülevaade
 
-See repositoorium sisaldab meie meeskonna nädalate kaupa valminud grupitöid DACA programmi jooksul.
+UrbanStyle Team 3 on DACA G3 õppeprogrammi raames moodustatud meeskond, kelle ülesanne on lahendada praktilisi andmeanalüüsi juhtumeid UrbanStyle näidisandmestiku põhjal.
+
+Repositoorium koondab meeskonnatöö käigus valminud SQL-lahendused, analüüsid, Power BI aruanded ja dokumentatsiooni ning kajastab projekti arengut nädalate lõikes.
 
 ## Meeskond
 
@@ -14,23 +16,37 @@ See repositoorium sisaldab meie meeskonna nädalate kaupa valminud grupitöid DA
 - Paul Vossotski
 - Germo Matt
 
-## Repositooriumi ülesehitus
+## Repositooriumi struktuur
 
-- week-0 – Projekti seadistamine
-- week-1 – SQL Basics
-- week-2 – SQL Data Cleaning
-- week-3 – SQL JOINs
-- week-4 – ...
-- week-5 – ...
+| Kaust | Sisu |
+|---|---|
+| `week-0` | Projekti ettevalmistus |
+| `week-1` | SQL Basics |
+| `week-2` | SQL Data Cleaning |
+| `week-3` | SQL JOINs |
+| `week-4` | SQL Aggregation |
+| `week-5` | Visualiseerimise disain ja Power BI dashboard |
+| `week-6` | Power BI dashboard’id ja andmelood |
+| `week-7` | Täiendamisel |
+| `week-8` | Täiendamisel |
+| `week-9` | Täiendamisel |
+| `week-10` | Lõppprojekt |
 
-## Kasutatud tööriistad
+## Kasutatud tehnoloogiad
 
-- PostgreSQL (Supabase)
+- PostgreSQL
+- Supabase
 - SQL
 - GitHub
 - NotebookLM
 - Power BI
 
-## Eesmärk
+## Projekti eesmärk
 
-Koondada kõik UrbanStyle meeskonna grupitööd, SQL lahendused, dokumentatsioon ja õppematerjalid ühte GitHubi repositooriumisse.
+Projekti eesmärk on rakendada andmeanalüüsi põhimõtteid praktiliste ärijuhtumite lahendamisel.
+
+Iga nädal keskendub erinevale analüüsiteemale ning selle käigus valmivad SQL-päringud, analüüsid, visualiseeringud, dashboard’id ja dokumentatsioon, mis talletatakse käesolevas repositooriumis.
+
+## Märkused
+
+Kõik analüüsid põhinevad UrbanStyle õppeandmestikul ning on koostatud DACA Andmeanalüütiku Karjäärikiirendi õppetöö raames.

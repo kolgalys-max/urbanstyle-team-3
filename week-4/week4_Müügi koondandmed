@@ -1,0 +1,94 @@
+1. Müük kuude kaupa.
+
+SELECT 
+    DATE_TRUNC('month', sale_date) AS kuu,
+    COUNT(sale_id) AS tellimuste_arv,
+    SUM(total_price) AS kogukäive,
+    ROUND(AVG(total_price), 2) AS keskmine_tellimus
+FROM sales
+WHERE sale_date >= '2024-01-01' 
+  AND sale_date < '2025-01-01'     -- <-- see piirab ainult 2024. aastaga
+GROUP BY DATE_TRUNC('month', sale_date)
+ORDER BY kuu;
+
+--Tulemus
+
+| kuu                 | tellimuste_arv | kogukäive | keskmine_tellimus |
+| ------------------- | -------------- | --------- | ----------------- |
+| 2024-01-01 00:00:00 | 312            | 85618.65  | 274.42            |
+| 2024-02-01 00:00:00 | 334            | 90181.83  | 270.01            |
+| 2024-03-01 00:00:00 | 412            | 109559.98 | 265.92            |
+| 2024-04-01 00:00:00 | 411            | 113838.38 | 276.98            |
+| 2024-05-01 00:00:00 | 413            | 116843.02 | 282.91            |
+| 2024-06-01 00:00:00 | 509            | 144558.18 | 284.00            |
+| 2024-07-01 00:00:00 | 510            | 146800.80 | 287.84            |
+| 2024-08-01 00:00:00 | 511            | 144870.17 | 283.50            |
+| 2024-09-01 00:00:00 | 392            | 109267.47 | 278.74            |
+| 2024-10-01 00:00:00 | 391            | 127622.32 | 326.40            |
+| 2024-11-01 00:00:00 | 392            | 110573.94 | 282.08            |
+| 2024-12-01 00:00:00 | 550            | 170623.28 | 310.22            |
+
+
+2. Müük kategooriate kaupa
+
+SELECT 
+    p.category,
+    COUNT(*) AS toodete_arv,
+    SUM(s.total_price) AS kogumyuk,
+    ROUND(AVG(p.retail_price), 2) AS keskmine_hind
+FROM sales s
+JOIN products p ON s.product_id = p.product_id
+WHERE s.sale_date >= '2024-01-01' 
+  AND s.sale_date < '2025-01-01'
+GROUP BY p.category
+HAVING SUM(s.total_price) > 300000     -- saab muuta (nt 200000 või 400000)
+ORDER BY kogumyuk DESC;
+
+--Tulemus
+
+| category      | toodete_arv | kogumyuk  | keskmine_hind |
+| ------------- | ----------- | --------- | ------------- |
+| meeste_riided | 1184        | 389738.54 | 188.03        |
+| jalanõusid    | 1006        | 379576.38 | 216.20        |
+| naiste_riided | 1025        | 342064.71 | 195.20        |
+
+3. Kuised trendid CTE-ga
+
+WITH kuu_myyk AS (
+    SELECT 
+        DATE_TRUNC('month', sale_date) AS kuu,
+        SUM(total_price) AS käive
+    FROM sales
+    WHERE sale_date >= '2024-01-01' 
+      AND sale_date < '2025-01-01'
+    GROUP BY DATE_TRUNC('month', sale_date)
+)
+SELECT 
+    kuu,
+    ROUND(käive, 2) AS käive,
+    ROUND(LAG(käive) OVER (ORDER BY kuu), 2) AS eelmine_kuu,
+    ROUND(käive - LAG(käive) OVER (ORDER BY kuu), 2) AS muutus,
+    ROUND(
+        (käive - LAG(käive) OVER (ORDER BY kuu)) 
+        / NULLIF(LAG(käive) OVER (ORDER BY kuu), 0) * 100, 
+        2
+    ) AS muutus_protsent
+FROM kuu_myyk
+ORDER BY kuu;
+
+--Tulemus
+
+| kuu                 | käive     | eelmine_kuu | muutus    | muutus_protsent |
+| ------------------- | --------- | ----------- | --------- | --------------- |
+| 2024-01-01 00:00:00 | 85618.65  | null        | null      | null            |
+| 2024-02-01 00:00:00 | 90181.83  | 85618.65    | 4563.18   | 5.33            |
+| 2024-03-01 00:00:00 | 109559.98 | 90181.83    | 19378.15  | 21.49           |
+| 2024-04-01 00:00:00 | 113838.38 | 109559.98   | 4278.40   | 3.91            |
+| 2024-05-01 00:00:00 | 116843.02 | 113838.38   | 3004.64   | 2.64            |
+| 2024-06-01 00:00:00 | 144558.18 | 116843.02   | 27715.16  | 23.72           |
+| 2024-07-01 00:00:00 | 146800.80 | 144558.18   | 2242.62   | 1.55            |
+| 2024-08-01 00:00:00 | 144870.17 | 146800.80   | -1930.63  | -1.32           |
+| 2024-09-01 00:00:00 | 109267.47 | 144870.17   | -35602.70 | -24.58          |
+| 2024-10-01 00:00:00 | 127622.32 | 109267.47   | 18354.85  | 16.80           |
+| 2024-11-01 00:00:00 | 110573.94 | 127622.32   | -17048.38 | -13.36          |
+| 2024-12-01 00:00:00 | 170623.28 | 110573.94   | 60049.34  | 54.31           |
