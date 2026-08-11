@@ -100,7 +100,7 @@ if __name__ == '__main__':
     })
     
     chart1 = create_weekly_chart(df_weekly_test)
-    chart2 = create_kpi_summary(kpis_test)
+    chart2 = create_kpi_summary(kpis_test) 
     
     export_results(
         df=df_rfm_test,
