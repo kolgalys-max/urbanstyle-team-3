@@ -262,3 +262,4 @@ if __name__ == "__main__":
 
     print("\n--- 4. Liidetud tabel (df_merged) ---")
     print(df_merged)
+    
