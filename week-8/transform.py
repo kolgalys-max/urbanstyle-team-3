@@ -51,30 +51,24 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
         except Exception as e:
             logger.error(f"Viga kuupäevade teisendamisel: {e}")
 
-    # 3. VAHEMIKE KONTROLL (Mõistlikud väärtused total_price jaoks)
-    # Toetame eeskätt total_price, vajadusel total_amount
-    price_col = (
-        "total_price"
-        if "total_price" in df_clean.columns
-        else ("total_amount" if "total_amount" in df_clean.columns else None)
-    )
-
-    if price_col:
+    # 3. VAHEMIKE KONTROLL (total_price)
+    if "total_price" in df_clean.columns:
         # Tagame, et veerg on numbriline
-        df_clean[price_col] = pd.to_numeric(
-            df_clean[price_col], errors="coerce"
+        df_clean["total_price"] = pd.to_numeric(
+            df_clean["total_price"], errors="coerce"
         )
 
         # Kontroll: tehingusumma ei tohi olla negatiivne ega NULL
         invalid_amounts = df_clean[
-            df_clean[price_col].isna() | (df_clean[price_col] < 0)
+            df_clean["total_price"].isna() | (df_clean["total_price"] < 0)
         ]
         if len(invalid_amounts) > 0:
             logger.warning(
                 f"Eemaldati {len(invalid_amounts)} rida vigase summaga (negatiivne või NULL)."
             )
             df_clean = df_clean[
-                df_clean[price_col].notna() & (df_clean[price_col] >= 0)
+                df_clean["total_price"].notna()
+                & (df_clean["total_price"] >= 0)
             ]
 
     logger.info(
@@ -90,33 +84,26 @@ def calculate_weekly_aggregates(df: pd.DataFrame) -> pd.DataFrame:
 
     df_clean = clean_data(df)
 
-    price_col = (
-        "total_price"
-        if "total_price" in df_clean.columns
-        else ("total_amount" if "total_amount" in df_clean.columns else None)
-    )
-
     # Valideerimine: kas vajalikud veerud on olemas?
-    if not price_col or "sale_date" not in df_clean.columns:
+    required_cols = {"sale_date", "total_price", "id"}
+    if not required_cols.issubset(df_clean.columns):
         logger.error(
-            "Puuduvad vajalikud veerud (sale_date või total_price) nädalakoondiks!"
+            f"Puuduvad vajalikud veerud nädalakoondiks! Vajalikud: {required_cols}"
         )
         return pd.DataFrame()
-
-    id_col = "id" if "id" in df_clean.columns else df_clean.columns[0]
 
     weekly = (
         df_clean.set_index("sale_date")
         .resample("W")
         .agg(
-            revenue=(price_col, "sum"),
-            order_count=(id_col, "count"),
-            avg_order_value=(price_col, "mean"),
+            revenue=("total_price", "sum"),
+            order_count=("id", "count"),
+            avg_order_value=("total_price", "mean"),
         )
         .reset_index()
     )
 
-    # Täidame tühjad nädalad 0-ga
+    # Täidame tühjad nädalad (kui tehinguid polnud) 0-ga
     weekly["revenue"] = weekly["revenue"].fillna(0)
     weekly["order_count"] = weekly["order_count"].fillna(0)
     weekly["avg_order_value"] = weekly["avg_order_value"].fillna(0)
@@ -140,14 +127,9 @@ def calculate_kpis(df: pd.DataFrame) -> dict:
             "avg_order_value": 0.0,
         }
 
-    price_col = (
-        "total_price"
-        if "total_price" in df_clean.columns
-        else ("total_amount" if "total_amount" in df_clean.columns else None)
-    )
     total_revenue = (
-        float(df_clean[price_col].sum())
-        if price_col and price_col in df_clean.columns
+        float(df_clean["total_price"].sum())
+        if "total_price" in df_clean.columns
         else 0.0
     )
     unique_customers = (
@@ -156,8 +138,8 @@ def calculate_kpis(df: pd.DataFrame) -> dict:
         else 0
     )
     avg_order_value = (
-        float(df_clean[price_col].mean())
-        if price_col and len(df_clean) > 0
+        float(df_clean["total_price"].mean())
+        if "total_price" in df_clean.columns and len(df_clean) > 0
         else 0.0
     )
 
@@ -167,6 +149,7 @@ def calculate_kpis(df: pd.DataFrame) -> dict:
         "avg_order_value": round(avg_order_value, 2),
     }
 
+    # Valideerime loogikat
     if kpis["total_revenue"] < 0:
         logger.warning("Hoiatus: Kogukäive arvutati negatiivsena!")
 
@@ -219,7 +202,6 @@ def merge_datasets(
 if __name__ == "__main__":
     logger.info("=== KÄIVITAN ROLL B TÄIELIKU TESTI KOOS VALIDEERIMISEGA ===")
 
-    # Testandmed kasutavad nüüd õiget veergu 'total_price':
     mock_sales = pd.DataFrame(
         {
             "id": [1, 2, 3, 4, 4, 5, 6],
@@ -262,4 +244,3 @@ if __name__ == "__main__":
 
     print("\n--- 4. Liidetud tabel (df_merged) ---")
     print(df_merged)
-    
