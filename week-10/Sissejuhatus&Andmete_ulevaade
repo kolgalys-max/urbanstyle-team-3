@@ -1,0 +1,41 @@
+URBANSTYLE.LTD: OPERATSIOONIDE JA KLIENDIKÄITUMISE TERVIKANALÜÜS
+DACA (Data Analyst Career Accelerator) Lõpuesitlus
+Ettevõte: UrbanStyle.ltd
+
+Tellija: Tegevjuht Kristi Tamm, juhtkond ja investorid
+
+Kuupäev: August 2026
+
+Autorid ja meeskond
+Lõpuesitluse autorid: Robi ja Dmitri
+Grupitöö kaasautorid: Germo ja Liis
+
+
+---------------------------
+
+
+Me oleme DACA kiirendi 3. grupp — Operations Intelligence meeskond, kuhu kuuluvad spetsialiseerunud rollidega andmeeksperdid, kes tõid ettevõtte andmekaosest välja tõelise ärilise väärtuse
+Meie missiooniks oli päästa UrbanStyle.ltd andmekaosest ning luua operatsioonijuht Liis Koppelile ja tegevjuht Kristi Tammele reaalajas töötavad, usaldusväärsed süsteemid. Tahtsime tagada, et iga laoseisu, poe käibe ja kliendiprofiili taga oleks 100% puhas ja valideeritud tõde, mis võimaldaks Kristi Tammel enesekindlalt kaasata investoritelt 500 000 eurot kasvurahastust 
+
+---------------------------
+
+Andmete ülevaade:
+
+UrbanStyle.ltd: Valideeritud andmete ja operatsioonide kompaktne ülevaade
+
+Andmekvaliteedi suurpuhastus: Müügiandmete analüüsi käigus tuvastati ja eemaldati 5 116 duplikaatset rida (33,6% andmebaasist), mis näitasid käivet ebarealistlikult suurena.
+
+Lisaks parandati 1 487 puuduvat kliendiviidet, korrigeeriti vigased tulevikukuupäevad ning ühtlustati linnade ebakorrapärased kirjapildid.
+Otsused põhinevad nüüd täielikult usaldusväärsel ja puhtal andmestikul.
+
+Kanalite ja asukohtade jaotus: E-pood on ettevõtte peamine tulukanal, moodustades umbes 60% kogukäibest.
+
+Jaemüügi (füüsiliste kaupluste) vaates on kindlaks lipulaevaks Tallinna esinduskauplus, mis genereerib 37,54% jaemüügi tulust.
+
+Kriitiline laoseisu anomaalia: Kuigi meeste rõivad moodustavad vaid ~15% kogumüügist, on neid hetkel laos koguseliselt kõige rohkem.
+
+Samal ajal on enimmüüdud naiste riiete (~60% müügist) ja aksessuaaride (~25%) varud madalad ning Tartu poe andmed vajavad tuvastatud ebakõlade tõttu füüsilist ülekontrolli.
+
+Kliendi väärtus ja automatiseerimine: Tuvastasime 245 VIP-klienti, kes toovad sisse märkimisväärse osa käibest ja kelle keskmine tellimusväärtus (AOV) on 89 eurot.
+
+Pythoni-põhise RFM-analüüsi automaatne andmetorustik säästab meeskonnalt 4 tundi käsitööd nädalas (umbes 200 tundi aastas).
